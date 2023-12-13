@@ -12,6 +12,13 @@ This implementation follows that described on the TensorFlow website: https://ww
 These are used to generate the dataset for each of the words in the ambigram.
 ### Step 2: Run the gen_ambigram_training function with your desired words
 This function takes two string arguments for each orientation of the ambigram. For instance, to generate the ambigram of John and Mary, run gen_ambigram_training('John".'Mary')
-### Step 3: Run Ambigram_Generator.py
+### Step 3: Run the Ambigram_Generator.py
 This file both constructs and traings the Cycle-GAN based on the chosen ambigram words. Please note that some edits may be needed to the location of the dataset images based on your own internal folder system, and that dataset_directory expects the name of a parent folder containing the folder holding the images, not the folder holding the images itself.
 Training using the implementation rovided is very slow. For this reason, running Ambigram_Generator.py on GPUs and/or over a Virtual Machine is strongly recommended. 
+### Step 4: Generate ambigrams
+Ambigrams can be generated corresponding to each of the fonts in the training data. They can be generated using the **generate_images** function, as below:
+
+```python 
+for inp in dataset.take(5):
+    generate_images(generator_f, inp)
+```
