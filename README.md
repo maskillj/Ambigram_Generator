@@ -1,6 +1,6 @@
 # Ambigram Generator
 
-## What is an ambigram?
+## What is an Ambigram?
 An ambigram is a word, number, or other figure that looks the same or can still be read when viewed (or rotated) upside down [source: https://www.dictionary.com/e/pop-culture/ambigram/]
 
 ## About the Project
